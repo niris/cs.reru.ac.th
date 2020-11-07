@@ -1,0 +1,8 @@
+{% for doc in include.from %}
+<article class=card>
+  <span class="text-grey pull-right">{{doc.date|date_to_rfc822}}</span>
+  <h4><a href="{{doc.url}}">{{ doc.title }}</a></h4>
+  {% for tag in doc.tags %}<span class="tag">{{tag}}</span>{% endfor %}
+  <p class=text-justify>{{doc.content}}</p>
+</article>
+{% endfor %}

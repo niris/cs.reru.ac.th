@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta charset="{{site.encoding}}">
+<title>{{ page.title  | default: site.title }}</title>
+<meta name="description" content="{{site.description}}">
+<meta name="generated" content="{{site.time}}">
+<link rel="icon" href="favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/chota@latest">
+<style>
+h1,h2,h3,h4,h5{font-family: 'Kanit', sans-serif;}
+main{margin:auto;padding:1em;max-width:960px;}
+</style>
+<nav class="tabs is-full">
+  {% assign pages = site.pages | where_exp: "p","p.title != nil" | sort:"order" %}
+  {% for page in pages %}
+  <a href="{{page.url}}" {% if page.icon %}class="brand"{% endif %}>{% if page.icon %}<img style="filter:invert(1) brightness(0.6)" src="{{page.icon}}">{% else %}{{page.title}}{% endif %}</a>
+  {% endfor %}
+</nav>
+<style>
+  nav.tabs{overflow-x:auto;position:sticky;top:0;z-index:99;background:black}
+  nav.tabs a{color: #CCC;border-bottom: 2px solid black;white-space: pre;}
+  nav.tabs>a.brand{padding: 8px 8px 0 16px;min-width:56px;max-width:56px}
+</style>
+{% if page.banner %}
+{% include {{page.banner}} %}
+{% endif %}
+
+<main>
+  {{ content }}
+</main>
+

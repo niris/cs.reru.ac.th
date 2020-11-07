@@ -1,0 +1,8 @@
+title: CS@RERU
+description: official
+defaults: [{"values":{"layout":"page", "order":50}}]
+collections:
+  posts: {output: true}
+  courses: {output: true}
+  teachers: {output: true}
+  students: {output: true}
