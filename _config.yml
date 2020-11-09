@@ -1,28 +1,33 @@
-# {{ site.title }}
-title: Your awesome title
-email: your-email@example.com
-facebook: fb.com/reru
-
-description: >-
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-
-# Build settings
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+title: CS@RERU
+description: official
+logo: M9,16 9,14 13,12 13,11 9,13 9,8 15,5 15,7 11,9 11,10 15,8 15,13 M15,3 9,0 9,2 12,3 9,4 9,6 M1,3 7,0 7,2 4,3 7,4 7,6 M1,13 1,5 7,8 7,11 3,9 3,11 7,13 7,16
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      type: "teachers"
+    values:
+      layout: "default"
+collections:
+  posts:
+    output: true
+    emoji: 📰
+    title: news
+  courses:
+    output: true
+    emoji: '🎒'
+    title: courses
+  teachers:
+    output: true
+    emoji: '👩‍🏫'
+    sort_by: name
+  papers:
+    emoji: '📓'
+    output: true
+  students:
+    emoji: '🎓'
+    output: true

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta charset="{{site.encoding}}">
+<title>{{site.title}} {{page.title}}</title>
+<meta name="description" content="{{site.description}}">
+<meta name="generated" content="{{site.time}}">
+<link rel="icon" href='data:image/svg+xml;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#135070"><path d="{{site.logo}}"></path></svg>'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% if site.watch==true %}<meta http-equiv=refresh content=1000>{% endif %}
+<link rel="stylesheet" href="https://unpkg.com/chota@latest">
+<nav class="tabs is-full" style="overflow-x:auto;position:sticky;top:0;z-index:99;background:var(--bg-color)">
+  <a class="brand" href="/" style="padding: 0.5em 0.5em 0 1em; display: flex;flex-direction: column;align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width=32 height=32 viewBox="0 0 16 16" fill="#135070"><path d="{{site.logo}}"></path></svg><span>RERU</span></a>
+  <a href="/register">📝 Register</a>
+  {% for c in site.collections %}
+  <a href="/{{c.label}}">{{ c.emoji }} {{ c.title | default:c.label | capitalize }}</a>
+  {% endfor %}
+</nav>
+<!--
+{% comment %}
+{% for c in site.collections %}
+<details class=dropdown>
+  <summary class=button>{{ c.label }}</summary>
+  <nav class=card>
+  {% for doc in site[c.label] %}
+    <a href="{{doc.id}}">{{ doc.title }}</a>
+  {% endfor %}
+  </nav>
+</details>
+{% endfor %}
+{% endcomment %}
+-->
+{{ content }}
+

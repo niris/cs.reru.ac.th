@@ -1,6 +1,6 @@
 # RERU CS Website
 
-Offer the following features/ressources:
+This website offer the following features/ressources:
 
 - Registration
 - Contact Info
@@ -12,7 +12,8 @@ Offer the following features/ressources:
 - Links (GDrive, Planning, FTP ...)
 
 # Roles
-- lycéen => register, showcase, contact(fb,map,tel)
-- student => cours, liens utils
-- evaluateur => knowledge, papers, proflist, seminaire
-- prof => admin
+
+- Highschool students
+- University students
+- Evaluators
+- Teachers (admin)
