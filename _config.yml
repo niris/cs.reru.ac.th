@@ -5,5 +5,4 @@ collections:
   posts: {output: true}
   courses: {output: true}
   teachers: {output: true}
-  papers: {output: true}
   students: {output: true}

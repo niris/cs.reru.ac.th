@@ -14,9 +14,9 @@ github_username: niris
 
 # Contact us
 
-[FB](https://fb.com/{{page.facebook_username}})  
-[Twitter](https://twitter.com/{{page.twitter_username}})  
-[Github](https://github.com/{{page.github_username}})  
-[Map](https://www.google.com/maps/place/{{page.place}})  
-Mail:[{{page.email}}](mailto:{{page.email}})  
-Phone:[{{page.phone}}](tel:{{page.phone}})  
+- [FB](https://fb.com/{{page.facebook_username}})
+- [Twitter](https://twitter.com/{{page.twitter_username}})
+- [Github](https://github.com/{{page.github_username}})
+- [Map](https://www.google.com/maps/place/{{page.place}})
+- Mail:[{{page.email}}](mailto:{{page.email}})
+- Phone:[{{page.phone}}](tel:{{page.phone}})
