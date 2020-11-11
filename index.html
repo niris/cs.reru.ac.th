@@ -1,5 +1,7 @@
 ---
 title: home
+icon: /favicon.svg
+order: -1
 email: cs.reru@gmail.com
 phone: 043-556001-8
 place: 7P854VVH+28
@@ -11,22 +13,23 @@ github_username: niris
 <div class=demo>
   <code></code>
   <div>
-    <h1>WE &lt;3 CODE</h1>
-    <div>You too ? let's meet !</div>
-    <nav>
-      <a href="https://fb.com/{{page.facebook_username}}"><img src=https://facebook.com/favicon.ico></a>
-      <a href="https://twitter.com/{{page.twitter_username}}"><img src=https://twitter.com/favicon.ico></a>
-      <a href="https://github.com/{{page.github_username}}"><img src=https://github.com/favicon.ico></a>
-      <a href="https://www.google.com/maps/place/{{page.place}}"><img src=https://www.openstreetmap.org/favicon.ico></a>
-      <a href="mailto:{{page.email}}"><img src=https://mail.google.com/favicon.ico></a>
-      <a href="tel:{{page.phone}}"><img src=https://www.whatsapp.com/favicon.ico></a>
-    </nav>
+    <h3>สาขาวิทยาการคอมพิวเตอร์</h3>
+    <h5 style=color:orange>มหาวิทยาลัยราชภัฏร้อยเอ็ด</h5>
   </div>
 </div>
+<nav>
+  <a href="https://fb.com/{{page.facebook_username}}">FB</a>
+  <a href="https://twitter.com/{{page.twitter_username}}">Twitter</a>
+  <a href="https://github.com/{{page.github_username}}">Github</a>
+  <a href="https://www.google.com/maps/place/{{page.place}}">Map</a>
+  <a href="mailto:{{page.email}}">Mail</a>
+  <a href="tel:{{page.phone}}">Phone:</a>
+</nav>
 <script>
   let i = 0;
   const code = document.querySelector('.demo>code')
-  const inter = setInterval(() => code.innerText = document.head.innerHTML.slice(0, i++), 1000 / 30)
+  const text = document.head.innerHTML + document.body.innerHTML
+  const inter = setInterval(() => code.innerText = text.slice(0, i++), 1000 / 30)
   setTimeout(() => clearInterval(inter), 1000 * 20)
 </script>
 <style>
@@ -36,9 +39,10 @@ github_username: niris
   }
 
   .demo>code {
-    padding: 1em 5em;
-    filter: blur(1px);
-    height: 12em;
+    padding: 5vh 5vh;
+    font-size: 2vw;
+    height: 100vh;
+    filter: blur(2px);
     white-space: nowrap;
     overflow: hidden;
     display: block;
@@ -47,23 +51,16 @@ github_username: niris
   }
 
   .demo>div {
+    position: absolute;
+    top: 25vh;
+    font-size: 5vw;
     text-align: center;
     color: white;
-    text-shadow: 0 2px 4px black;
-    position: absolute;
-    top: 1em;
     height: 100%;
     width: 100%;
     font-family: monospace;
   }
 
-  .demo img {
-    width: 48px;
-    background: white;
-    border-radius: 8px;
-    display: inline-block;
-    padding: 8px;
-  }
 </style>
 
 List of Teacher
