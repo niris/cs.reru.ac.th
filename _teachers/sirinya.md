@@ -1,9 +1,10 @@
 ---
-firstname: sirinya
-lastname: on-at
-mail: onat@reru.ac.th
-phone: +66541236987
-skills: sql vue php
+firstname: Sirinya
+lastname: ON-AT
+mail: sirinya.on-at@reru.ac.th
+phone: 
+skills:
+website: sirinya.reru.ac.th
 ---
 
 # Welcome to my homepage !
