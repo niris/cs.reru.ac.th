@@ -1,8 +1,17 @@
-{% for doc in include.from %}
-<article class=card>
-  <span class="text-grey pull-right">{{doc.date|date_to_rfc822}}</span>
-  <h4><a href="{{doc.url}}">{{ doc.title }}</a></h4>
-  {% for tag in doc.tags %}<span class="tag">{{tag}}</span>{% endfor %}
-  <p class=text-justify>{{doc.content}}</p>
+{% assign docs = include.from | sort:"order" %}
+{% for doc in docs %}
+<article class=card {% if doc.cover %}style="
+background-image: linear-gradient(90deg, rgba(255,255,255,.9), rgba(255,255,255,.7)), url({{doc.cover}});
+background-size: cover;
+background-position: 50% 50%;"{% endif %}>
+	<h4>
+		<a href="{{doc.url}}">{{ doc.title }}</a>
+		{% for tag in doc.tags %}<a class="tag is-small" href="tag">{{tag}}</a>{% endfor %}
+		<!--time class="pull-right">{{doc.date|date_to_string}}</time-->
+	</h4>
+	<div class="row">
+		{% if doc.avatar %}<img style="height:64px; padding:0 .5em" class="is-rounded" src="{{doc.avatar}}">{% endif %}
+		{{doc.excerpt|defaults:doc.content}}
+	</div>
 </article>
 {% endfor %}

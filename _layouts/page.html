@@ -1,32 +1,47 @@
 <!DOCTYPE html>
+<html lang="{{site.lang}}">
 <meta charset="{{site.encoding}}">
-<title>{{ page.title  | default: site.title }}</title>
+<title>{{ page.title | default: site.title }}</title>
 <meta name="description" content="{{site.description}}">
 <meta name="generated" content="{{site.time}}">
-<link rel="icon" href="favicon.svg">
+<meta name="keywords" content="{{site.keywords}}">
+<link rel="icon" href="/favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap">
 <link rel="stylesheet" href="https://unpkg.com/chota@latest">
 <style>
-h1,h2,h3,h4,h5{font-family: 'Kanit', sans-serif;}
-main{margin:auto;padding:1em;max-width:960px;}
+:root{--font-family-sans: 'Kanit', sans-serif;--grid-maxWidth: 960px;}
+main{padding:1em;}
+article{margin:1em 0;}
+nav.tabs{overflow-x:auto;position:sticky;top:0;z-index:99;background:black}
+nav.tabs a{color: #CCC;border-bottom: 2px solid black;white-space: pre;}
+nav.tabs>a.brand{padding: 8px 8px 0 16px;min-width:56px;max-width:56px}
+body>header{padding: 150px 0 60px 0; background-size: cover; background-position: 50% 50%;}
+body>header>div{font-size: 3.5em; color: white;}
 </style>
+{% assign links = site.pages | where_exp: "p","p.title != nil" | sort:"order" %}
 <nav class="tabs is-full">
-  {% assign pages = site.pages | where_exp: "p","p.title != nil" | sort:"order" %}
-  {% for page in pages %}
-  <a href="{{page.url}}" {% if page.icon %}class="brand"{% endif %}>{% if page.icon %}<img style="filter:invert(1) brightness(0.6)" src="{{page.icon}}">{% else %}{{page.title}}{% endif %}</a>
-  {% endfor %}
+{% for link in links %}
+  <a href="{{link.url}}" class="{% if link.icon %}brand {% endif %}{% if page.url == link.url%}active{% endif %}">{% if link.icon %}<img style="filter:invert(1) brightness(0.6)" src="{{link.icon}}">{% else %}{{link.title}}{% endif %}</a>
+{% endfor %}
 </nav>
-<style>
-  nav.tabs{overflow-x:auto;position:sticky;top:0;z-index:99;background:black}
-  nav.tabs a{color: #CCC;border-bottom: 2px solid black;white-space: pre;}
-  nav.tabs>a.brand{padding: 8px 8px 0 16px;min-width:56px;max-width:56px}
-</style>
-{% if page.banner %}
-{% include {{page.banner}} %}
+{% if page.banner %}{% include {{page.banner}} %}{% endif %}
+{% if page.cover and page.title %}<header style="background-image:linear-gradient(0, black, transparent),url({{page.cover}})"><div class=container>{{page.title}}</div></header>{% endif %}
+<main class=container>
+{{ content }}
+
+{% if page.previous or page.next %}
+<footer class=nav>
+	<div class="nav-left">
+{% if page.previous %}
+		<a class="button outline" href="{{page.previous.url}}">&lt;&lt; {{page.previous.title}}</a>
 {% endif %}
-
-<main>
-  {{ content }}
+	</div>
+	<div class="nav-right">
+{% if page.next %}
+		<a class="button outline" href="{{page.next.url}}">{{page.next.title}} &gt;&gt;</a>
+{% endif %}
+	</div>
+</footer>
+{% endif %}
 </main>
-

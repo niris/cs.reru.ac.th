@@ -1,0 +1,14 @@
+---
+layout: page
+---
+<header class="row" {% if page.cover %}style="margin-top: -50px;padding-bottom: 1em;"{% endif %}>
+{% if page.avatar %}<img class="is-rounded" style="height:200px" src="{{page.avatar}}">{% endif %}
+<div class="col" style="margin:calc(50px + 1em) 0 0 1em">
+{% if page.mail %}Mail: <a href="mailto:{{page.mail}}">{{page.mail}}</a><br>{% endif %}
+{% if page.facebook %}Facebook: <a href="page.facebook">{{page.facebook}}</a><br>{% endif %}
+{% if page.website %}Web: <a href="{{page.website}}">{{page.website}}</a><br>{% endif %}
+{% if page.tags %}I❤️: {{page.tags}}<br>{% endif %}
+</div>
+</header>
+
+{{content}}
