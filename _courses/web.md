@@ -1,5 +1,9 @@
 ---
-title: Mathematics
+title: Web
 ---
 
-stuff about mathematics
+In this course you will learn the following languages:
+
+- CSS
+- JS
+- HTML
