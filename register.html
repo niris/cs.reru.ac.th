@@ -3,46 +3,9 @@ title: สมัครเรียน
 order: 1
 ---
 
-<form method=post action="/sign/up" @submit.prevent="">
-	<table>
-		<tr>
-			<td><img width=96 src="/favicon.svg"></td>
-			<td><h1 class=text-center>Computer Science Registration Form</h1><h3 class=text-center>2020-2021</h3></td>
-		</tr>
-	</table>
-	<fieldset>
-		<legend>Personal</legend>
-		<label><span>Title</span><select name="title" autocomplete="honorific-prefix"><option>Mr.</option><option>Ms.</option></select></label>
-		<label><span>First Name</span><input name="firstname" required autocomplete="given-name"></label>
-		<label><span>Last Name</span><input name="lastname" required autocomplete="family-name"></label>
-		<label><span>Birthday</span><input name="birthday" required autocomplete="bday" type=date></label>
-		<label><span>IdCard Number (13 digit)</span><input name="identity" required autocomplete="" type=number minlength="13" maxlength="13"></label>
-	</fieldset>
-	<fieldset>
-		<legend>HighSchool</legend>
-		<label><span>Name</span><input name="schoolname" required></label>
-		<label><span>Province</span><input name="province" list="provinces" required></label>
-		<datalist id=provinces><option>กรุงเทพมหานคร</option><option>อำนาจเจริญ</option><option>อ่างทอง</option><option>บึงกาฬ</option><option>บุรีรัมย์</option><option>ฉะเชิงเทรา</option><option>ชัยนาท</option><option>ชัยภูมิ</option><option>จันทบุรี</option><option>เชียงใหม่</option><option>เชียงราย</option><option>ชลบุรี</option><option>ชุมพร</option><option>กาฬสินธุ์</option><option>กำแพงเพชร</option><option>กาญจนบุรี</option><option>ขอนแก่น</option><option>กระบี่</option><option>ลำปาง</option><option>ลำพูน</option><option>เลย</option><option>ลพบุรี</option><option>แม่ฮ่องสอน</option><option>มหาสารคาม</option><option>มุกดาหาร</option><option>นครนายก</option><option>นครปฐม</option><option>นครพนม</option><option>นครราชสีมา</option><option>นครสวรรค์</option><option>นครศรีธรรมราช</option><option>น่าน</option><option>นราธิวาส</option><option>หนองบัวลำภู</option><option>หนองคาย</option><option>นนทบุรี</option><option>ปทุมธานี</option><option>ปัตตานี</option><option>พังงา</option><option>พัทลุง</option><option>พะเยา</option><option>เพชรบูรณ์</option><option>เพชรบุรี</option><option>พิจิตร</option><option>พิษณุโลก</option><option>พระนครศรีอยุธยา</option><option>แพร่</option><option>ภูเก็ต</option><option>ปราจีนบุรี</option><option>ประจวบคีรีขันธ์</option><option>ระนอง</option><option>ราชบุรี</option><option>ระยอง</option><option>ร้อยเอ็ด</option><option>สระแก้ว</option><option>สกลนคร</option><option>สมุทรปราการ</option><option>สมุทรสาคร</option><option>สมุทรสงคราม</option><option>สระบุรี</option><option>สตูล</option><option>สิงห์บุรี</option><option>ศรีสะเกษ</option><option>สงขลา</option><option>สุโขทัย</option><option>สุพรรณบุรี</option><option>สุราษฎร์ธานี</option><option>สุรินทร์</option><option>ตาก</option><option>ตรัง</option><option>ตราด</option><option>อุบลราชธานี</option><option>อุดรธานี</option><option>อุทัยธานี</option><option>อุตรดิตถ์</option><option>ยะลา</option><option>ยโสธร</option></datalist>
-		<label><span>Options</span><input name="schoolopts" required></label>
-		<label><span>Grade</span><input name="schoolnote" required></label>
-	</fieldset>
-	<fieldset>
-		<legend>Contact</legend>
-		<label><span>Phone</span><input name="tel" type="tel" autocomplete="tel"></label>
-		<label><span>Email</span><input name="mail" type="email" autocomplete="email" required></label>
-		<label><span>Line</span><input name="line"></label>
-		<label><span>Facebook</span><input name="facebook"></label>
-	</fieldset>
-	<fieldset>
-		<legend>Payment</legend>
-		<label>
-			<span>Method</span>
-			<select><option>cash<option>credit</select>
-		</label>
-	</fieldset>
-	<p class=text-right>
-		<input type=submit value=create v-if="create">
-		<input type=submit value=update v-if="update">
-		<input type=submit value=delete v-if="update" formmethod=DELETE>
-	</p>
-</form>
+สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏร้อยเอ็ด
+เปิดรับสมัครนักศึกษาใหม่ประจำปีการศึกษา 2564
+สมัครเรียนออนไลน์ได้ที่ : <a src="https://admission.reru.ac.th/">admission.reru.ac.th</a>
+เลือก : 👉 หลักสูตรวิทยาศาสตรบัณฑิต 👉 สาขาวิทยาการคอมพิวเตอร์
+หรือ กรอกแบบฟอร์มรับสมัครผ่านคณะเทคโนโลยีสารสนเทศ : <a src="shorturl.at/defmJ">แบบฟอร์มรับสมัครคณะเทคโนโลยีสารสนเทศ</a> 
+ติดต่อผ่านแฟนเพจของสาขาวิชา : 💻 <a src="https://www.facebook.com/comsci.reru">https://www.facebook.com/comsci.reru </a>
