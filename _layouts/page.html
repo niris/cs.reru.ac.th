@@ -24,7 +24,6 @@ body>header>div{font-size: 3.5em; color: white;}
 {% for link in links %}
   <a href="{{link.url}}" class="{% if link.icon %}brand {% endif %}{% if page.url == link.url%}active{% endif %}">{% if link.icon %}<img style="filter:invert(1) brightness(0.6)" src="{{link.icon}}">{% else %}{{link.title}}{% endif %}</a>
 {% endfor %}
-<a href="https://drive.google.com/file/d/1MuH1ah4WFT3szNPPrb9shr24c7VKvRtx/view?usp=sharing">หลักสูตร</a>
 
 </nav>
 {% if page.banner %}{% include {{page.banner}} %}{% endif %}
