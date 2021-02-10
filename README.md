@@ -13,7 +13,7 @@ permalink: /
 
 # ติดต่อ
 
-- <https://facebook.com/comsci.reru>
+- <https://facebook.com/cs.reru>
 - <https://twitter.com/csreru>
 - <cs@reru.ac.th>
 - Phone: [043-556001-8](tel:043-556001-8)
