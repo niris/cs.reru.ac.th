@@ -7,8 +7,8 @@
 <meta name="keywords" content="{{site.keywords}}">
 <link rel="icon" href="/favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap">
-<link rel="stylesheet" href="https://unpkg.com/chota@latest">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap" media="none" onload="media='all'">
+<link rel="stylesheet" href="https://unpkg.com/chota@0.8.0/dist/chota.min.css">
 <style>
 :root{--font-family-sans: 'Kanit', sans-serif;--grid-maxWidth: 960px;}
 main{padding:1em;}
@@ -22,7 +22,7 @@ body>header>div{font-size: 3.5em; color: white;}
 {% assign links = site.pages | where_exp: "p","p.title != nil" | sort:"order" %}
 <nav class="tabs is-full">
 {% for link in links %}
-  <a href="{{link.url}}" class="{% if link.icon %}brand {% endif %}{% if page.url == link.url%}active{% endif %}">{% if link.icon %}<img style="filter:invert(1) brightness(0.6)" src="{{link.icon}}">{% else %}{{link.title}}{% endif %}</a>
+  <a href="{{link.url}}" class="{% if link.icon %}brand {% endif %}{% if page.url == link.url%}active{% endif %}">{% if link.icon %}<img alt=logo title="home" style="filter:invert(1) brightness(0.6)" src="{{link.icon}}">{% else %}{{link.title}}{% endif %}</a>
 {% endfor %}
 
 </nav>
